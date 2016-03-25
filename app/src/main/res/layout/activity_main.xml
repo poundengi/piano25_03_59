@@ -22,9 +22,10 @@
             android:id="@+id/textView"
             android:textSize="40dp"
             android:textIsSelectable="true"
-            android:textColor="#116fcc"
+            android:textColor="#fd0004"
             android:gravity="center"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:background="#6649a9f2" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -37,43 +38,57 @@
                 android:layout_height="match_parent"
                 android:id="@+id/button"
                 android:layout_weight="0"
-                android:textColor="#fa0f0f" />
+                android:background="#9df02323" />
 
             <Button
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:id="@+id/button2"
-                android:layout_weight="0" />
+                android:layout_weight="0"
+                android:textColor="#f10404"
+                android:background="#dbe4b049" />
 
             <Button
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:id="@+id/button3" />
+                android:id="@+id/button3"
+                android:textColor="#f10404"
+                android:background="#abd5ba0c" />
 
             <Button
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:id="@+id/button4" />
+                android:id="@+id/button4"
+                android:textColor="#f10404"
+                android:background="#b579e60c" />
 
             <Button
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:id="@+id/button5" />
+                android:id="@+id/button5"
+                android:textColor="#f10404"
+                android:background="#9f6f2acf" />
 
             <Button
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:id="@+id/button6" />
+                android:id="@+id/button6"
+                android:textColor="#f10404"
+                android:background="#94d54cd5" />
 
             <Button
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:id="@+id/button7" />
+                android:id="@+id/button7"
+                android:textColor="#f10404"
+                android:background="#b9dd0876" />
 
             <Button
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:id="@+id/button8" />
+                android:id="@+id/button8"
+                android:textColor="#f10404"
+                android:background="#a173dcd5" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
