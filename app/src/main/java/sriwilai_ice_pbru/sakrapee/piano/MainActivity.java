@@ -1,11 +1,15 @@
 package sriwilai_ice_pbru.sakrapee.piano;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
     //2. Explicit
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }//Main Method
 
     private void buttonController() {
+
         DoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,20 +60,36 @@ public class MainActivity extends AppCompatActivity {
                 MiMediaPlayer.start();
             }
         });
+        FaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer FaMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.song4);
+                FaMediaPlayer.start();
+
+
+            }
+        });
+
+        DOButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://youtu.be/kTHcaTCM4rs"));
+                startActivities(intent);
+
+            }
+        });
 
 
 
 
-        {
+
+
         }
-
-
-    }//button Controller
-
     private void bindwidget() {
         DoButton = (Button) findViewById(R.id.button);
         LeButton = (Button) findViewById(R.id.button2);
-        MeButton = (Button) findViewById(R.id.button3);
+        MiButton = (Button) findViewById(R.id.button3);
         FaButton = (Button) findViewById(R.id.button4);
         SoButton = (Button) findViewById(R.id.button5);
         LaButton = (Button) findViewById(R.id.button6);

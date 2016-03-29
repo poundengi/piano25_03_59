@@ -60,7 +60,7 @@
                 android:id="@+id/button3"
                 android:textColor="#f10404"
                 android:background="#abd5ba0c"
-                android:text="Me"
+                android:text="Mi"
                 android:textSize="25dp" />
 
             <Button
