@@ -1,7 +1,10 @@
 package sriwilai_ice_pbru.sakrapee.piano;
 
+import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -9,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     //access type name
     private Button DoButton;
     private Button LeButton;
-    private Button MeButton;
+    private Button MiButton;
     private Button FaButton;
     private Button SoButton;
     private Button LaButton;
@@ -21,11 +24,46 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //3. Bind widget
         bindwidget();
+        //4. Button Controller
+        buttonController();
 
 
 
 
     }//Main Method
+
+    private void buttonController() {
+        DoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer DoMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.song1);
+                DoMediaPlayer.start();
+
+            }
+        });
+        LeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer LeMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.song2);
+                LeMediaPlayer.start();
+            }
+        });
+        MiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer MiMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.song3);
+                MiMediaPlayer.start();
+            }
+        });
+
+
+
+
+        {
+        }
+
+
+    }//button Controller
 
     private void bindwidget() {
         DoButton = (Button) findViewById(R.id.button);
